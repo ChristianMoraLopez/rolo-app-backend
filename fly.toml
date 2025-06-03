@@ -1,12 +1,11 @@
-# fly.toml app configuration file generated for rolo-app-backend on 2025-06-03T22:41:48Z
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
 app = 'rolo-app-backend'
 primary_region = 'bog'
 
 [build]
+  builder = "docker"
+
+[processes]
+  app = "npm run start"
 
 [http_service]
   internal_port = 8080
