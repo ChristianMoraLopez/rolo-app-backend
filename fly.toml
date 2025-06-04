@@ -2,7 +2,7 @@ app = 'rolo-app-backend'
 primary_region = 'bog'
 
 [build]
-  builder = "docker"
+  dockerfile = "Dockerfile"
 
 [processes]
   app = "npm run start"
